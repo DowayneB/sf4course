@@ -31,9 +31,7 @@ services:
         arguments:
             $locale: '%locale%'
 
-    app.greeting:
-        public: true
-        alias: App\Service\Greeting
+
 
 #    App\Service\Greeting:
 #        arguments:
