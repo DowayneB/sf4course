@@ -39,6 +39,7 @@ class UserType extends AbstractType
                 'label' => 'I agree to the terms of service'
             ])
             ->add('Register', SubmitType::class);
+
     }
 
     public function configureOptions(OptionsResolver $resolver)
