@@ -8,6 +8,14 @@
                     {{ user.fullName }}
                     <small class="text-muted"> @{{ user.username }}</small>
                 </h5>
+
+                {% if is_granted('ROLE_USER') and user != app.user %}
+                    {% if user.followers.contains(app.user) == false %}
+                        <a href="{{ path('following_follow', {'id' : user.id}) }}" class="btn btn-outline-primary">Follow</a>
+                    {% else %}
+                        <a href="{{ path('following_unfollow', {'id' : user.id}) }}" class="btn btn-outline-danger">Unfollow</a>
+                    {% endif %}
+                {% endif %}
             </div>
         </div>
     </div>
