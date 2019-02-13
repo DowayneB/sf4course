@@ -30,7 +30,7 @@ class FollowingController extends Controller
         $currentUser = $this->getUser();
         if ($userToFollow->getId() !== $currentUser->getId()){
             $currentUser = $this->getUser();
-            $currentUser->getFollowing()->add($userToFollow);
+            $currentUser->follow($userToFollow);
 
             $this->getDoctrine()->getManager()->flush();
         }
