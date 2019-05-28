@@ -90,10 +90,10 @@ class User implements UserInterface, \Serializable
 
     public function __construct()
     {
-        $this->posts = new ArrayCollection();
-        $this->followers = new ArrayCollection();
-        $this->following = new ArrayCollection();
-        $this->postsLiked = new ArrayCollection();
+        $this->posts        = new ArrayCollection();
+        $this->followers    = new ArrayCollection();
+        $this->following    = new ArrayCollection();
+        $this->postsLiked   = new ArrayCollection();
     }
 
     public function getRoles()
