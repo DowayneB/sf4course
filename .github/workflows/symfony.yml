@@ -36,7 +36,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-php-
     - name: Do Stuff
-      run: composer config --no-plugins allow-plugins.symfony/flex [true|false]
+      run: composer config --no-plugins allow-plugins.symfony/flex true
     - name: Update Composer
       run: composer update
     - name: Install Dependencies
